@@ -1888,10 +1888,10 @@ a { text-decoration: none; }
 
 .back-to-top {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
-  width: 52px;
-  height: 52px;
+  right: 20px;
+  bottom: 80px;
+  width: 46px;
+  height: 46px;
 
   display: flex;
   align-items: center;
@@ -1905,8 +1905,7 @@ a { text-decoration: none; }
 
   cursor: pointer;
 
-  box-shadow:
-    0 8px 24px rgba(0, 51, 160, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 51, 160, 0.30);
 
   opacity: 0;
   visibility: hidden;
@@ -1922,17 +1921,18 @@ a { text-decoration: none; }
 }
 
 .back-to-top svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .back-to-top:hover {
   background: #012e7c;
   transform: translateY(-3px);
+  opacity: 0.9 !important;
 }
 
 .back-to-top.show {
-  opacity: 1;
+  opacity: 0.55;
   visibility: visible;
   transform: translateY(0);
 }
