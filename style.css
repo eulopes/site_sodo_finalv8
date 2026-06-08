@@ -920,7 +920,7 @@ a { text-decoration: none; }
 }
 .blog-num {
   position: absolute;
-  bottom: 12px; right: 16px;
+  bottom: 20px; right: 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 48px;
