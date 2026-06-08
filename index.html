@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+  <html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sodo Elétrica – Soluções Elétricas com Segurança e Qualidade</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary:    '#0033A0',
+              'primary-hover': '#002680',
+              dark:       '#0A1118',
+              'dark-card':'#112240',
+              muted:      '#64748B',
+              border:     '#E2E8F0',
+            },
+            fontFamily: {
+              heading: ['Montserrat', 'sans-serif'],
+              body:    ['Inter', 'sans-serif'],
+            },
+            maxWidth: { container: '1200px' },
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="font-body text-slate-800 bg-white antialiased">
+
+    <!-- ═══════════════════════════════════════════
+        HEADER
+    ═══════════════════════════════════════════ -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark/95 backdrop-blur border-b border-white/[0.07]">
+      <div class="max-w-container mx-auto px-6">
+        <div class="flex items-center justify-between h-[72px] gap-6">
+
+          <!-- Logo -->
+          <a href="#inicio" class="logo flex items-center gap-2.5 no-underline flex-shrink-0">
+            <div class="w-20 h-20 flex items-center justify-center">
+              <img src="logo 2.png" alt="Logo Sodo Elétrica" class="w-full h-full object-contain"/>
+            </div>
+            <span class="font-sans font-bold text-lg tracking-wide">
+            <span class="text-[#4D8BFF]">Sodo</span>
+            <span class="text-white">Elétrica</span>
+            </span>
+          </a>
+
+          <!-- Nav Desktop -->
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="#inicio"        class="nav-link">Início</a>
+            <a href="#servicos"      class="nav-link">Serviços</a>
+            <a href="#sobre"         class="nav-link">Sobre Nós</a>
+            <a href="#como-funciona" class="nav-link">Como Funciona</a>
+            <a href="#projetos"      class="nav-link">Projetos</a>
+            <a href="#blog"          class="nav-link">Blog</a>
+            <a href="#contato"       class="nav-link">Contato</a>
+            <a href="parcerias.html" target="_blank" rel="noopener" class="nav-link nav-link-parceria">Parcerias ↗</a>
+          </nav>
+
+          <!-- Ações -->
+          <div class="flex items-center gap-3">
+            <a href="#orcamento" class="btn-primary hidden sm:inline-flex">Solicite Orçamento →</a>
+            <!-- Hambúrguer (mobile) -->
+            <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menu">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden bg-dark border-t border-white/10 px-6 py-4 flex-col gap-4" style="display:none;">
+        <a href="#inicio"        class="nav-link-mobile">Início</a>
+        <a href="#servicos"      class="nav-link-mobile">Serviços</a>
+        <a href="#sobre"         class="nav-link-mobile">Sobre Nós</a>
+        <a href="#como-funciona" class="nav-link-mobile">Como Funciona</a>
+        <a href="#projetos"      class="nav-link-mobile">Projetos</a>
+        <a href="#blog"          class="nav-link-mobile">Blog</a>
+        <a href="#contato"       class="nav-link-mobile">Contato</a>
+        <a href="parcerias.html" target="_blank" rel="noopener" class="nav-link-mobile nav-link-parceria-mobile">Parcerias ↗</a>
+        <a href="#orcamento" class="btn-primary text-center mt-2">Solicite Orçamento →</a>
+      </div>
+    </header>
+
+
+    <!-- ═══════════════════════════════════════════
+        HERO
+    ═══════════════════════════════════════════ -->
+    <section id="inicio" class="hero-section bg-dark min-h-screen flex items-center pt-[72px] relative overflow-hidden">
+      <!-- Efeitos de fundo -->
+      <div class="hero-glow-1 pointer-events-none"></div>
+      <div class="hero-glow-2 pointer-events-none"></div>
+      <div class="hero-logo-pattern pointer-events-none"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-72px)] py-20">
+
+          <!-- Texto -->
+          <div class="reveal">
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span> 
+              Executando projetos elétricos com qualidade e segurança.
+            </div>
+
+            <h1 class="font-heading font-extrabold text-white uppercase leading-[1.1] tracking-tight mt-7 mb-6" style="font-size: clamp(36px, 4.5vw, 58px)">
+              Soluções Elétricas com<br>
+              <span class="text-[#4D8BFF]">Segurança</span> e<br>
+              <span class="text-[#4D8BFF]">Qualidade.</span>
+            </h1>
+
+            <p class="text-white/65 text-lg leading-relaxed mb-6 max-w-md">
+              Especialistas em Engenharia Elétrica, Sistemas de Média Tensão, Cabines Primárias e Soluções Energéticas para os mais diversos segmentos.
+            </p>
+
+           
+
+            <div class="flex flex-wrap gap-4">
+              <a href="#orcamento" class="btn-primary text-sm px-7 py-3.5">Solicitar Orçamento →</a>
+              <a href="#servicos"  class="btn-secondary text-sm px-7 py-3.5">Saiba Mais</a>
+            </div>
+
+            <!-- Stats -->
+            <div class="flex flex-wrap gap-10 mt-14 pt-10 border-t border-white/10">
+              <div>
+                <div class="font-heading font-bold text-3xl text-white">100+</div>
+                <div class="text-sm text-white/50 mt-0.5">Projetos entregues</div>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-3xl text-white">5+</div>
+                <div class="text-sm text-white/50 mt-0.5">Anos de experiência</div>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-3xl text-white">100%</div>
+                <div class="text-sm text-white/50 mt-0.5">Satisfação garantida</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto real: técnico Sodo no campo -->
+          <div class="flex items-center justify-center reveal reveal-right">
+            <div class="hero-photo-frame">
+              <img
+                src="6.png"
+                alt="Técnico Sodo Elétrica em campo"
+                class="w-full h-full object-cover"
+              />
+              <div class="hero-photo-badge">✓ NR-10 Certificado</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+        SERVIÇOS
+    ═══════════════════════════════════════════ -->
+    <section id="servicos" class="py-24 bg-white">
+      <div class="max-w-container mx-auto px-6">
+
+        <div class="text-center mb-16 reveal">
+          <p class="section-label">O que fazemos</p>
+          <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(28px,3.8vw,46px);font-weight:800;color:#1E293B;line-height:1.15;margin:10px 0 0;">
+            Especialistas em soluções elétricas<br>
+            <span style="color:#0033A0;">para empresas e indústrias.</span>
+          </h2>
+          <p style="color:#64748B;margin-top:18px;font-size:15px;line-height:1.7;">
+            Projetos, instalações e manutenção com padrão profissional,<br>
+            segurança e conformidade em cada detalhe.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Cabines Primárias -->
+          <div class="service-card reveal" data-delay="0">
+            <div class="service-icon">
+              <img src="cabine.png" alt="Cabines Primárias" />
+            </div>
+            <h3 class="service-name">Cabines Primárias</h3>
+            <p class="service-desc">Projeto, instalação e adequação de cabines primárias conforme normas vigentes.</p>
+            <a href="#orcamento" class="service-link">Saiba mais →</a>
+          </div>
+
+          <!-- Média Tensão -->
+          <div class="service-card reveal" data-delay="100">
+            <div class="service-icon">
+              <img src="conversor.png" alt="Média Tensão" />
+            </div>
+            <h3 class="service-name">Média Tensão</h3>
+            <p class="service-desc">Infraestrutura completa para distribuição de energia com segurança e eficiência.</p>
+            <a href="#orcamento" class="service-link">Saiba mais →</a>
+          </div>
+
+          <!-- Projetos Elétricos -->
+          <div class="service-card reveal" data-delay="200">
+            <div class="service-icon">
+              <img src="projeto.png" alt="Projetos Elétricos" />
+            </div>
+            <h3 class="service-name">Projetos Elétricos</h3>
+            <p class="service-desc">Desenvolvimento de projetos elétricos com segurança, eficiência e conformidade.</p>
+            <a href="#orcamento" class="service-link">Saiba mais →</a>
+          </div>
+
+          <!-- Manutenção Especializada -->
+          <div class="service-card reveal" data-delay="300">
+            <div class="service-icon">
+              <img src="manutencista.png" alt="Manutenção Especializada" />
+            </div>
+            <h3 class="service-name">Manutenção Especializada</h3>
+            <p class="service-desc">Manutenção preventiva e corretiva para máxima confiabilidade e disponibilidade dos sistemas.</p>
+            <a href="#orcamento" class="service-link">Saiba mais →</a>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-14 reveal">
+          <a href="#orcamento" class="btn-outline">Ver Todos os Serviços →</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+        SOBRE NÓS
+    ═══════════════════════════════════════════ -->
+    <section id="sobre" class="py-24 bg-dark relative overflow-hidden">
+      <div class="about-glow pointer-events-none"></div>
+      <!-- subtle grid overlay -->
+      <div class="pointer-events-none absolute inset-0" style="background-image:linear-gradient(rgba(0,51,160,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,51,160,0.04) 1px,transparent 1px);background-size:48px 48px;"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+
+        <!-- Bloco principal: texto + foto equipe -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+
+          <!-- Texto + especialidades -->
+          <div class="reveal">
+            <p class="section-label">Quem somos</p>
+            <h2 class="section-title text-white" style="font-size:clamp(26px,3vw,40px);font-weight:800;line-height:1.15;">
+              Especialistas em<br>Engenharia Elétrica e<br>Sistemas de Média Tensão<span style="color:#4D8BFF;">.</span>
+            </h2>
+            <p class="text-white/60 text-base leading-relaxed mt-5 mb-4 max-w-md">
+              A SODO Elétrica atua em projetos, instalações e manutenção de sistemas elétricos para empresas, indústrias e condomínios, entregando segurança, eficiência e conformidade técnica em cada projeto.
+            </p>
+
+            <!-- Badges de diferenciais -->
+            <div class="grid grid-cols-2 gap-3 mt-8">
+              <div class="about-badge-item">
+                <svg class="about-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Engenharia Qualificada</span>
+              </div>
+              <div class="about-badge-item">
+                <svg class="about-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                <span>Conformidade com Normas</span>
+              </div>
+              <div class="about-badge-item">
+                <svg class="about-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 13C4 9.13 7.58 6 12 6s8 3.13 8 7"/><path d="M2 14h20"/><rect x="7" y="14" width="10" height="5" rx="1"/></svg>
+                <span>Equipe Certificada NR10</span>
+              </div>
+              <div class="about-badge-item">
+                <svg class="about-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                <span>Atendimento Rápido e Eficiente</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto com stats flutuantes -->
+          <div class="reveal reveal-right">
+            <div class="about-photo-stack">
+              <div class="about-photo-main">
+                <img src="cabine eletrica.png" alt="Instalação elétrica de média tensão Sodo Elétrica" class="w-full h-full object-cover" />
+              </div>
+              <!-- Stats flutuantes sobrepostos -->
+              <div class="about-stats-overlay">
+                <div class="about-stat-item">
+                  <svg class="about-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  <div>
+                    <div class="about-stat-num">100+</div>
+                    <div class="about-stat-label">Projetos entregues</div>
+                  </div>
+                </div>
+                <div class="about-stat-divider"></div>
+                <div class="about-stat-item">
+                  <svg class="about-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <div>
+                    <div class="about-stat-num">5+</div>
+                    <div class="about-stat-label">Anos de experiência</div>
+                  </div>
+                </div>
+                <div class="about-stat-divider"></div>
+                <div class="about-stat-item">
+                  <svg class="about-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <div>
+                    <div class="about-stat-num">100%</div>
+                    <div class="about-stat-label">Satisfação garantida</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Nossa Atuação + Missão / Visão / Valores -->
+        <div class="border-t border-white/[0.07] pt-14 reveal">
+          <p class="section-label text-center mb-8">Nossa Atuação</p>
+
+          <!-- Lista de serviços em grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-14">
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Instalações elétricas residenciais, comerciais e industriais</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Projetos elétricos de baixa e média tensão</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Montagem e manutenção de quadros elétricos</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Infraestrutura elétrica (eletrocalhas, eletrodutos e leitos)</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Instalação e adequação de padrões de entrada</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Manutenção preventiva e corretiva em sistemas elétricos</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Manutenção preventiva e corretiva em cabines de média tensão</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Montagem, adequação e modernização de cabines primárias</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Serviços especializados em redes e sistemas de média tensão</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Confecção, montagem e ensaios de muflas de média tensão</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Instalação e substituição de terminações e emendas de cabos MT</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Manutenção de barramentos blindados (Bus Way)</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Análise de qualidade de energia e termografia</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Instalação de sistemas de proteção contra surtos (DPS)</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Laudos técnicos, inspeções e diagnósticos elétricos</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Adequação às normas NR-10, NR-35, NBR 5410 e NBR 14039</span></div>
+            <div class="flex items-start gap-3 text-white/70 text-sm leading-relaxed"><span class="text-[#4D8BFF] font-bold flex-shrink-0 mt-0.5">✔</span><span>Sistemas de iluminação e eficiência energética</span></div>
+          </div>
+
+          <!-- Missão / Visão / Valores -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+            <div class="about-service-card">
+              <div class="about-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div class="about-service-title">Nossa Missão</div>
+              <div class="about-service-desc">Fornecer soluções elétricas seguras, eficientes e inovadoras, contribuindo para a confiabilidade das instalações e o sucesso dos negócios de nossos clientes.</div>
+            </div>
+
+            <div class="about-service-card">
+              <div class="about-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <div class="about-service-title">Nossa Visão</div>
+              <div class="about-service-desc">Ser referência no mercado de engenharia e serviços elétricos, especialmente em sistemas de média tensão, reconhecida pela excelência técnica, segurança e qualidade.</div>
+            </div>
+
+            <div class="about-service-card">
+              <div class="about-service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="about-service-title">Nossos Valores</div>
+              <div class="about-service-desc">Segurança, ética, excelência técnica, compromisso com resultados, respeito aos clientes e colaboradores, inovação e qualidade em cada serviço.</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+        COMO FUNCIONA O PROCESSO
+    ═══════════════════════════════════════════ -->
+    <section id="como-funciona" class="py-20 bg-white">
+      <div class="max-w-container mx-auto px-6">
+
+        <div class="text-center mb-14 reveal">
+          <p class="section-label">Processo</p>
+          <h2 class="section-title">Como funciona o atendimento da Sodo?</h2>
+          <p class="text-muted mt-3 max-w-xl mx-auto text-base leading-relaxed">
+            Do primeiro contato até a entrega final, cada etapa é pensada para garantir segurança, agilidade e transparência.
+          </p>
+        </div>
+
+        <div class="relative">
+          <!-- Linha conectora (desktop) -->
+          <div class="hidden lg:block absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" style="top: 40px; z-index: 0;"></div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+
+            <div class="process-step reveal" data-delay="0">
+              <div class="process-num">01</div>
+              <div class="process-icon">
+                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              </div>
+              <h3 class="process-title">Contato Inicial</h3>
+              <p class="process-desc">Você nos chama pelo WhatsApp ou formulário. Respondemos em até 2 horas.</p>
+            </div>
+
+            <div class="process-step reveal" data-delay="100">
+              <div class="process-num">02</div>
+              <div class="process-icon">
+                <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              </div>
+              <h3 class="process-title">Visita Técnica</h3>
+              <p class="process-desc">Um técnico vai até o local para avaliar o projeto e entender suas necessidades.</p>
+            </div>
+
+            <div class="process-step reveal" data-delay="200">
+              <div class="process-num">03</div>
+              <div class="process-icon">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <h3 class="process-title">Orçamento Detalhado</h3>
+              <p class="process-desc">Enviamos uma proposta clara com materiais, prazo e valor sem surpresas.</p>
+            </div>
+
+            <div class="process-step reveal" data-delay="300">
+              <div class="process-num">04</div>
+              <div class="process-icon">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 class="process-title">Execução e Entrega</h3>
+              <p class="process-desc">Realizamos o serviço com segurança, limpeza e dentro do prazo combinado.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+        TEMPO DE RESPOSTA + HORÁRIOS
+    ═══════════════════════════════════════════ -->
+    <section class="py-20 bg-dark relative overflow-hidden">
+      <div class="absolute pointer-events-none" style="top:-150px;left:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,51,160,0.15) 0%,transparent 70%);border-radius:50%;"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <!-- Tempo de Resposta -->
+          <div class="reveal">
+            <p class="section-label">Agilidade</p>
+            <h2 class="section-title text-white">Respondemos rápido.<br>Resolvemos mais rápido ainda.</h2>
+            <p class="text-white/60 mt-4 leading-relaxed max-w-md">
+              Sabemos que problemas elétricos não esperam. Por isso, nosso compromisso é com a velocidade sem abrir mão da qualidade.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
+              <div class="response-card">
+                <div class="response-icon">
+                  <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                </div>
+                <div class="response-time">até 2h</div>
+                <div class="response-label">Primeira resposta</div>
+              </div>
+              <div class="response-card">
+                <div class="response-icon">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div class="response-time">24h</div>
+                <div class="response-label">Visita técnica</div>
+              </div>
+              <div class="response-card">
+                <div class="response-icon">
+                  <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div class="response-time">48h</div>
+                <div class="response-label">Orçamento em mãos</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horários -->
+          <div class="reveal reveal-right">
+            <div class="schedule-card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="schedule-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-white text-lg">Horários de Atendimento</h3>
+                  <p class="text-white/40 text-sm">São Paulo e Grande SP</p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <div class="schedule-row">
+                  <span class="schedule-day">Segunda a Sexta</span>
+                  <span class="schedule-time">08h00 – 18h00</span>
+                </div>
+                <div class="schedule-divider"></div>
+                <div class="schedule-row">
+                  <span class="schedule-day">Sábado</span>
+                  <span class="schedule-time">08h00 – 13h00</span>
+                </div>
+                <div class="schedule-divider"></div>
+                <div class="schedule-row">
+                  <span class="schedule-day">Domingo e Feriados</span>
+                  <span class="schedule-time schedule-closed">Sob consulta</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-6 border-t border-white/[0.07] flex items-start gap-3">
+                <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-green-500/15 border border-green-500/25 flex items-center justify-center">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" style="color:#22c55e"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.535 5.845L.057 23.885l6.247-1.636A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.031-1.374l-.361-.214-3.741.979 1.004-3.634-.235-.374A9.856 9.856 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106c5.42 0 9.894 4.474 9.894 9.894 0 5.42-4.474 9.894-9.894 9.894z"/></svg>
+                </div>
+                <p class="text-white/50 text-sm leading-relaxed">
+                  Urgências fora do horário? Nos chame pelo <span class="text-white/80 font-medium">WhatsApp</span> — respondemos o mais rápido possível.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+        PROJETOS
+    ═══════════════════════════════════════════ -->
+    <section id="projetos" class="py-20 bg-slate-50">
+      <div class="max-w-container mx-auto px-6">
+
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12 reveal">
+          <div>
+            <p class="section-label">Portfólio</p>
+            <h2 class="section-title">Soluções que fazem a diferença.</h2>
+          </div>
+          <a href="https://www.instagram.com/sodoeletrica" target="_blank" rel="noopener" class="btn-outline flex-shrink-0">Ver Mais Projetos →</a>
+        </div>
+
+        <!-- Grade de fotos reais -->
+        <div class="project-gallery-grid">
+
+          <!-- DESTAQUE: Ultra Academia — fachada iluminada (2 cols x 2 linhas) -->
+          <div class="project-photo-card reveal project-photo-featured" data-delay="0">
+            <img src="22.png" alt="Ultra Academia — instalação elétrica fachada LED" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Comercial</span>
+              <p class="project-photo-title">Ultra Academia - Praia Grande</p>
+              <p class="project-photo-sub">Fachada com iluminação LED perimetral</p>
+            </div>
+          </div>
+
+          <!-- Jardaim Bar exterior -->
+          <div class="project-photo-card reveal" data-delay="100">
+            <img src="11.jpeg" alt="Jardaim Bar e Restaurante — instalação elétrica" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Comercial</span>
+              <p class="project-photo-title">O Parrilista - Cidade Monções</p>
+              <p class="project-photo-sub">Sistema elétrico e iluminação de fachada</p>
+            </div>
+          </div>
+
+          <!-- Ultra Academia LED interno -->
+          <div class="project-photo-card reveal" data-delay="150">
+            <img src="27.png" alt="Ultra Academia — iluminação LED industrial interna" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">LED Industrial</span>
+              <p class="project-photo-title">Ultra Academia — Serra</p>
+              <p class="project-photo-sub">Iluminação LED industrial de grande porte</p>
+            </div>
+          </div>
+
+          <!-- Jardaim Bar interior iluminado -->
+          <div class="project-photo-card reveal" data-delay="200">
+            <img src="14.jpeg" alt="Jardaim Bar — ambiente interno iluminado" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Ambientação</span>
+              <p class="project-photo-title">O Parrilista - Brooklin </p>
+              <p class="project-photo-sub">Iluminação de ambientação e cordão de luz</p>
+            </div>
+          </div>
+
+          <!-- Ultra Academia musculação -->
+          <div class="project-photo-card reveal" data-delay="250">
+            <img src="26.png" alt="Ultra Academia — área de musculação com LED" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Industrial</span>
+              <p class="project-photo-title">Ultra Academia — Praia Grande</p>
+              <p class="project-photo-sub">Instalação elétrica de grande porte</p>
+            </div>
+          </div>
+
+          <!-- Restaurante comercial com instalação aparente -->
+          <div class="project-photo-card reveal" data-delay="300">
+            <img src="25.png" alt="Restaurante — instalação elétrica comercial" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Comercial</span>
+              <p class="project-photo-title">Jardan - Haddock Lobo</p>
+              <p class="project-photo-sub">Infraestrutura elétrica completa</p>
+            </div>
+          </div>
+
+          <!-- Centro de medição ENEL -->
+          <div class="project-photo-card reveal" data-delay="350">
+            <img src="33.png" alt="Centro de medição ENEL instalado" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Medição</span>
+              <p class="project-photo-title">Centro de Medição</p>
+              <p class="project-photo-sub">Reforma e adequação — padrão ENEL</p>
+            </div>
+          </div>
+
+          <!-- Gerador / cabine primária -->
+          <div class="project-photo-card reveal" data-delay="400">
+            <img src="32.png" alt="Instalação de grupo gerador — Sodo Elétrica" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Industrial</span>
+              <p class="project-photo-title">Grupo Gerador</p>
+              <p class="project-photo-sub">Instalação e comissionamento</p>
+            </div>
+          </div>
+
+
+          <!-- Técnico em cabine elétrica -->
+          <div class="project-photo-card reveal" data-delay="450">
+            <img src="34.png" alt="Técnico realizando manutenção em cabine elétrica de média tensão" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Média Tensão</span>
+              <p class="project-photo-title">Manutenção em Cabine MT</p>
+              <p class="project-photo-sub">Intervenção técnica em quadro de média tensão</p>
+            </div>
+          </div>
+
+          <!-- Instalação em altura — andaime -->
+          <div class="project-photo-card reveal" data-delay="500">
+            <img src="proj_andaime.png" alt="Equipe realizando instalação elétrica em altura com andaimes" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Industrial</span>
+              <p class="project-photo-title">Instalação em Altura</p>
+              <p class="project-photo-sub">Cabeamento e infraestrutura em pé-direito alto</p>
+            </div>
+          </div>
+
+          <!-- Transformador / subestação -->
+          <div class="project-photo-card reveal" data-delay="550">
+            <img src="proj_transformador.png" alt="Subestação com transformador de distribuição instalado" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Subestação</span>
+              <p class="project-photo-title">Subestação de Distribuição</p>
+              <p class="project-photo-sub">Transformador + cabos de MT e BT</p>
+            </div>
+          </div>
+
+          <!-- Centro de medição / padrão ENEL externo -->
+          <div class="project-photo-card reveal" data-delay="600">
+            <img src="proj_painel.png" alt="Centro de medição ENEL — padrão de entrada externo" loading="lazy" />
+            <div class="project-photo-overlay">
+              <span class="project-badge">Padrão ENEL</span>
+              <p class="project-photo-title">Entrada de Energia — Padrão ENEL</p>
+              <p class="project-photo-sub">Centro de medição externo com ramal de entrada</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+        CTA
+    ═══════════════════════════════════════════ -->
+  <section class="py-16 reveal relative overflow-hidden"
+         style="background: linear-gradient(110deg, #0033A0 0%, #0047E0 100%); border-radius: 12px;">
+
+  <div class="absolute pointer-events-none"
+       style="top: -80px; right: -80px; width: 300px; height: 300px;
+              background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 70%);
+              border-radius: 50%;"></div>
+
+  <div class="max-w-container mx-auto px-6 relative z-10" style="font-family: 'Montserrat', sans-serif;">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+
+      <div class="flex items-center gap-5 text-center lg:text-left">
+
+        <!-- Ícone: lâmpada SVG no lugar do raio -->
+        <div class="hidden sm:flex flex-shrink-0 items-center justify-center"
+             style="width: 68px; height: 68px; border-radius: 12px;
+                    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.20);">
+          <svg width="38" height="38" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Corpo da lâmpada -->
+            <path d="M32 4C18.7 4 8 14.7 8 28C8 36.8 12.8 44.4 20 48.6V56C20 57.1 20.9 58 22 58H42C43.1 58 44 57.1 44 56V48.6C51.2 44.4 56 36.8 56 28C56 14.7 45.3 4 32 4Z"
+                  fill="white" fill-opacity="0.92"/>
+            <!-- Base / filamentos -->
+            <rect x="22" y="60" width="20" height="5" rx="2" fill="white" fill-opacity="0.75"/>
+            <rect x="24" y="67" width="16" height="4" rx="2" fill="white" fill-opacity="0.6"/>
+            <!-- Cúpula -->
+            <path d="M26 73 Q32 80 38 73" fill="white" fill-opacity="0.5"/>
+            <!-- Brilho interno -->
+            <ellipse cx="26" cy="22" rx="5" ry="8" fill="white" fill-opacity="0.25" transform="rotate(-20 26 22)"/>
+          </svg>
+        </div>
+
+        <div>
+          <h2 class="font-bold text-white text-2xl lg:text-3xl leading-tight"
+              style="font-weight: 800; letter-spacing: -0.3px;">
+            Vamos tirar seu projeto do papel?
+          </h2>
+          <p class="mt-2" style="color: rgba(255,255,255,0.75); font-size: 15px;">
+            Fale com a Sodo Elétrica e receba um atendimento rápido e personalizado.
+          </p>
+        </div>
+
+      </div>
+
+      <a href="#orcamento"
+         class="flex-shrink-0 flex items-center gap-2 transition-transform hover:-translate-y-px"
+         style="background: #fff; color: #0033A0; font-family: 'Montserrat', sans-serif;
+                font-size: 14px; font-weight: 700; padding: 14px 28px;
+                border-radius: 6px; text-decoration: none; white-space: nowrap;">
+        Solicitar Orçamento
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="#0033A0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- ═══════════════════════════════════════════
+        BLOG
+    ═══════════════════════════════════════════ -->
+<section id="blog" class="py-20 bg-white">
+  <div class="max-w-container mx-auto px-6">
+
+    <div class="mb-12 reveal">
+      <p class="section-label">Artigos</p>
+      <h2 class="section-title">Conteúdo que ilumina suas escolhas.</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- CARD 1 — SEGURANÇA -->
+      <a href="#" class="blog-card reveal" data-delay="0">
+        <div class="blog-thumb">
+          <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="168" fill="#0A1118"/>
+            <line x1="0" y1="28" x2="400" y2="28" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="56" x2="400" y2="56" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="84" x2="400" y2="84" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="112" x2="400" y2="112" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="140" x2="400" y2="140" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="66" y1="0" x2="66" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="133" y1="0" x2="133" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="266" y1="0" x2="266" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="333" y1="0" x2="333" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <path d="M200 28 L238 44 L238 88 Q238 116 200 130 Q162 116 162 88 L162 44 Z" fill="rgba(0,51,160,0.25)" stroke="#4D8BFF" stroke-width="1.5"/>
+            <path d="M205 58 L193 82 L202 82 L196 108 L215 78 L205 78 Z" fill="#4D8BFF"/>
+            <g transform="translate(242,28)">
+              <path d="M18 4 L32 30 L4 30 Z" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1.5" stroke-linejoin="round"/>
+              <rect x="17" y="14" width="2" height="8" rx="1" fill="#ef4444"/>
+              <circle cx="18" cy="26" r="1.2" fill="#ef4444"/>
+            </g>
+            <path d="M80 50 Q95 62 80 74" stroke="#4D8BFF" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".5"/>
+            <path d="M96 44 Q116 62 96 80" stroke="#4D8BFF" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".3"/>
+            <text x="35" y="118" font-family="Montserrat,sans-serif" font-weight="700" font-size="9" fill="rgba(77,139,255,0.5)" letter-spacing="1">NR-10</text>
+            <text x="22" y="130" font-family="Montserrat,sans-serif" font-weight="700" font-size="8" fill="rgba(255,255,255,0.2)" letter-spacing="1.5">CERTIFICADO</text>
+            <rect x="290" y="52" width="70" height="6" rx="3" fill="rgba(34,197,94,0.6)"/>
+            <rect x="290" y="65" width="54" height="6" rx="3" fill="rgba(34,197,94,0.4)"/>
+            <rect x="290" y="78" width="62" height="6" rx="3" fill="rgba(34,197,94,0.5)"/>
+            <rect x="290" y="91" width="40" height="6" rx="3" fill="rgba(239,68,68,0.6)"/>
+            <text x="290" y="43" font-family="Montserrat,sans-serif" font-weight="600" font-size="8" fill="rgba(255,255,255,0.3)" letter-spacing="1">STATUS</text>
+          </svg>
+          <span class="blog-num">01</span>
+        </div>
+        <div class="p-6">
+          <span class="blog-tag">Segurança</span>
+          <h3 class="blog-title">Sobrecarga elétrica: os riscos que você não vê.</h3>
+          <p class="blog-desc">Entenda os perigos da sobrecarga e como prevenir acidentes na sua instalação.</p>
+        </div>
+      </a>
+
+      <!-- CARD 2 — MANUTENÇÃO -->
+      <a href="#" class="blog-card reveal" data-delay="100">
+        <div class="blog-thumb">
+          <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="168" fill="#0A1118"/>
+            <line x1="0" y1="28" x2="400" y2="28" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="56" x2="400" y2="56" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="84" x2="400" y2="84" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="112" x2="400" y2="112" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="140" x2="400" y2="140" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <rect x="130" y="22" width="140" height="120" rx="4" fill="rgba(17,34,64,0.9)" stroke="rgba(0,51,160,0.4)" stroke-width="1.5"/>
+            <rect x="130" y="22" width="140" height="18" rx="4" fill="rgba(0,51,160,0.3)"/>
+            <text x="200" y="35" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="8" fill="rgba(77,139,255,0.8)" letter-spacing="1.5">QUADRO ELÉTRICO</text>
+            <rect x="148" y="50" width="40" height="20" rx="3" fill="rgba(0,51,160,0.5)" stroke="rgba(77,139,255,0.5)" stroke-width="1"/>
+            <rect x="150" y="53" width="10" height="14" rx="2" fill="#4D8BFF"/>
+            <rect x="148" y="78" width="40" height="20" rx="3" fill="rgba(0,51,160,0.5)" stroke="rgba(77,139,255,0.5)" stroke-width="1"/>
+            <rect x="150" y="81" width="10" height="14" rx="2" fill="#4D8BFF"/>
+            <rect x="148" y="106" width="40" height="20" rx="3" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.5)" stroke-width="1"/>
+            <rect x="150" y="109" width="10" height="8" rx="2" fill="#ef4444"/>
+            <circle cx="182" cy="116" r="4" fill="rgba(239,68,68,0.9)"/>
+            <circle cx="182" cy="116" r="2" fill="#fff"/>
+            <rect x="212" y="50" width="40" height="20" rx="3" fill="rgba(0,51,160,0.5)" stroke="rgba(77,139,255,0.5)" stroke-width="1"/>
+            <rect x="214" y="53" width="10" height="14" rx="2" fill="#4D8BFF"/>
+            <rect x="212" y="78" width="40" height="20" rx="3" fill="rgba(0,51,160,0.5)" stroke="rgba(77,139,255,0.5)" stroke-width="1"/>
+            <rect x="214" y="81" width="10" height="14" rx="2" fill="#4D8BFF"/>
+            <rect x="212" y="106" width="40" height="20" rx="3" fill="rgba(0,51,160,0.5)" stroke="rgba(77,139,255,0.5)" stroke-width="1"/>
+            <rect x="214" y="109" width="10" height="14" rx="2" fill="#4D8BFF"/>
+            <rect x="285" y="38" width="72" height="68" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <rect x="285" y="38" width="72" height="18" rx="4" fill="rgba(0,51,160,0.4)"/>
+            <text x="321" y="51" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="9" fill="#7BAEFF">PREV.</text>
+            <text x="293" y="67" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,0.3)">S  T  Q  Q  S</text>
+            <text x="293" y="79" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,0.5)"> 1   2   3   4   5</text>
+            <text x="293" y="91" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,0.5)"> 8   9  10  11  12</text>
+            <circle cx="303" cy="89" r="5" fill="rgba(77,139,255,0.25)" stroke="#4D8BFF" stroke-width="1"/>
+            <path d="M50 100 Q44 94 48 86 Q52 78 60 80 L76 64 L80 68 L64 84 Q68 94 62 100 Q56 106 50 100Z" fill="rgba(77,139,255,0.12)" stroke="#4D8BFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="76" y1="64" x2="86" y2="54" stroke="#4D8BFF" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+          </svg>
+          <span class="blog-num">02</span>
+        </div>
+        <div class="p-6">
+          <span class="blog-tag">Manutenção</span>
+          <h3 class="blog-title">Manutenção preventiva: por que é tão importante?</h3>
+          <p class="blog-desc">Evite paradas e prejuízos com inspeções e manutenções periódicas no seu sistema.</p>
+        </div>
+      </a>
+
+      <!-- CARD 3 — PROJETOS -->
+      <a href="#" class="blog-card reveal" data-delay="200">
+        <div class="blog-thumb">
+          <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="168" fill="#0A1118"/>
+            <line x1="0" y1="28" x2="400" y2="28" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="56" x2="400" y2="56" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="84" x2="400" y2="84" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="112" x2="400" y2="112" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="0" y1="140" x2="400" y2="140" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="80" y1="0" x2="80" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="160" y1="0" x2="160" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="240" y1="0" x2="240" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <line x1="320" y1="0" x2="320" y2="168" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <rect x="60" y="30" width="280" height="108" rx="2" fill="none" stroke="rgba(77,139,255,0.35)" stroke-width="1.5" stroke-dasharray="6 3"/>
+            <line x1="180" y1="30" x2="180" y2="138" stroke="rgba(77,139,255,0.35)" stroke-width="1.5" stroke-dasharray="6 3"/>
+            <line x1="60" y1="95" x2="180" y2="95" stroke="rgba(77,139,255,0.25)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <circle cx="100" cy="58" r="8" fill="rgba(0,51,160,0.3)" stroke="#4D8BFF" stroke-width="1.2"/>
+            <line x1="97" y1="58" x2="103" y2="58" stroke="#4D8BFF" stroke-width="1.5"/>
+            <line x1="100" y1="55" x2="100" y2="61" stroke="#4D8BFF" stroke-width="1.5"/>
+            <rect x="148" y="50" width="10" height="16" rx="2" fill="rgba(0,51,160,0.3)" stroke="#4D8BFF" stroke-width="1.2"/>
+            <line x1="153" y1="54" x2="153" y2="60" stroke="#4D8BFF" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="120" cy="62" r="11" fill="rgba(0,51,160,0.15)" stroke="rgba(77,139,255,0.5)" stroke-width="1.2" stroke-dasharray="3 2"/>
+            <path d="M116 62 L120 56 L124 62" stroke="#4D8BFF" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            <polyline points="120,73 120,85 100,85 100,66" stroke="rgba(77,139,255,0.4)" stroke-width="1" fill="none" stroke-dasharray="3 2"/>
+            <circle cx="270" cy="58" r="8" fill="rgba(0,51,160,0.3)" stroke="#4D8BFF" stroke-width="1.2"/>
+            <line x1="267" y1="58" x2="273" y2="58" stroke="#4D8BFF" stroke-width="1.5"/>
+            <line x1="270" y1="55" x2="270" y2="61" stroke="#4D8BFF" stroke-width="1.5"/>
+            <circle cx="310" cy="65" r="10" fill="rgba(0,51,160,0.15)" stroke="rgba(77,139,255,0.5)" stroke-width="1.2" stroke-dasharray="3 2"/>
+            <path d="M306 65 L310 59 L314 65" stroke="#4D8BFF" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            <polyline points="310,75 310,88 270,88 270,66" stroke="rgba(77,139,255,0.4)" stroke-width="1" fill="none" stroke-dasharray="3 2"/>
+            <rect x="64" y="108" width="24" height="18" rx="2" fill="rgba(0,51,160,0.5)" stroke="#4D8BFF" stroke-width="1.5"/>
+            <text x="76" y="121" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="7" fill="#7BAEFF">QE</text>
+            <polyline points="76,108 76,95 120,95 120,84" stroke="rgba(77,139,255,0.5)" stroke-width="1.2" fill="none"/>
+            <polyline points="76,95 200,95 270,95 270,88" stroke="rgba(77,139,255,0.3)" stroke-width="1" fill="none"/>
+            <line x1="340" y1="118" x2="366" y2="92" stroke="rgba(255,255,255,0.25)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M366 92 L372 88 L370 96 Z" fill="rgba(255,255,255,0.35)"/>
+            <line x1="340" y1="118" x2="344" y2="122" stroke="rgba(255,255,255,0.15)" stroke-width="3" stroke-linecap="round"/>
+            <rect x="330" y="122" width="50" height="8" rx="1" fill="rgba(77,139,255,0.15)" stroke="rgba(77,139,255,0.3)" stroke-width="1"/>
+            <line x1="340" y1="122" x2="340" y2="130" stroke="rgba(77,139,255,0.5)" stroke-width="0.8"/>
+            <line x1="350" y1="122" x2="350" y2="128" stroke="rgba(77,139,255,0.3)" stroke-width="0.8"/>
+            <line x1="360" y1="122" x2="360" y2="130" stroke="rgba(77,139,255,0.5)" stroke-width="0.8"/>
+            <line x1="370" y1="122" x2="370" y2="128" stroke="rgba(77,139,255,0.3)" stroke-width="0.8"/>
+          </svg>
+          <span class="blog-num">03</span>
+        </div>
+        <div class="p-6">
+          <span class="blog-tag">Projetos</span>
+          <h3 class="blog-title">Como planejar a parte elétrica da sua obra.</h3>
+          <p class="blog-desc">Dicas essenciais para um projeto seguro, eficiente e dentro das normas técnicas.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="#" class="btn-outline">Ver Todos os Artigos →</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ═══════════════════════════════════════════
+        CONTATO / ORÇAMENTO
+    ═══════════════════════════════════════════ -->
+    <section id="orcamento" class="py-20 bg-slate-50">
+      <div class="max-w-container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <!-- Texto -->
+          <div class="reveal">
+            <p class="section-label">Fale conosco</p>
+            <h2 class="section-title">Solicite seu orçamento gratuito.</h2>
+            <p class="text-muted mt-4 leading-relaxed max-w-sm">
+              Entre em contato pelo WhatsApp ou Instagram. Nossa equipe responde rápido e oferece a melhor solução para o seu projeto.
+            </p>
+
+            <div class="mt-10 flex flex-col gap-5">
+              <div class="flex items-center gap-4">
+                <div class="contact-info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs text-muted font-medium uppercase tracking-wide">Telefone / WhatsApp</p>
+                  <p class="font-medium text-slate-800">(11) 99754-2196</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="contact-info-icon">
+                  <!-- Instagram icon -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs text-muted font-medium uppercase tracking-wide">Instagram</p>
+                  <p class="font-medium text-slate-800">@sodoeletrica</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="contact-info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs text-muted font-medium uppercase tracking-wide">Localização</p>
+                  <p class="font-medium text-slate-800">São Paulo – SP</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botões de Contato -->
+          <div class="reveal reveal-right">
+            <div class="contact-card">
+              <p class="text-sm text-muted mb-8 text-center">Escolha a melhor forma de nos contatar:</p>
+
+              <!-- WhatsApp -->
+              <a href="https://wa.me/5511962766513?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener" class="contact-channel-btn contact-channel-whatsapp">
+                <div class="contact-channel-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.535 5.845L.057 23.885l6.247-1.636A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.031-1.374l-.361-.214-3.741.979 1.004-3.634-.235-.374A9.856 9.856 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106c5.42 0 9.894 4.474 9.894 9.894 0 5.42-4.474 9.894-9.894 9.894z"/></svg>
+                </div>
+                <div class="contact-channel-text">
+                  <span class="contact-channel-label">WhatsApp</span>
+                  <span class="contact-channel-desc">(11) 96276-6513 — Resposta rápida</span>
+                </div>
+                <svg class="w-5 h-5 opacity-50 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/sodoeletrica" target="_blank" rel="noopener" class="contact-channel-btn contact-channel-instagram">
+                <div class="contact-channel-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+                <div class="contact-channel-text">
+                  <span class="contact-channel-label">Instagram</span>
+                  <span class="contact-channel-desc">@sodoeletrica — Veja nosso trabalho</span>
+                </div>
+                <svg class="w-5 h-5 opacity-50 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+
+              <p class="text-xs text-muted text-center mt-6">Atendemos em São Paulo e Grande SP.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+        PARCERIAS
+    ═══════════════════════════════════════════ -->
+    <section id="parcerias" class="py-20 bg-dark relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse 50% 60% at 80% 50%, rgba(0,51,160,0.16) 0%, transparent 70%);"></div>
+
+      <div class="max-w-container mx-auto px-6 relative z-10">
+
+        <!-- Cabeçalho -->
+        <div class="text-center mb-14 reveal">
+          <p class="section-label">Ecossistema de Parceiros</p>
+          <h2 class="section-title text-white">Empresas que constroem junto com a Sodo.</h2>
+          <p class="text-white/40 text-sm mt-3 max-w-md mx-auto">Parcerias estratégicas selecionadas que fortalecem nossa capacidade de entrega em tecnologia, obras e gestão.</p>
+        </div>
+
+        <!-- Cards dos 3 parceiros -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+          <!-- Elevus -->
+          <div class="about-service-card reveal" style="padding:32px 28px;">
+            <div class="about-service-icon" style="width:52px;height:52px;border-radius:12px;margin-bottom:20px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(77,139,255,0.1);border:1px solid rgba(77,139,255,0.2);border-radius:100px;padding:3px 10px;font-size:10px;font-weight:600;color:#7BAEFF;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:12px;">
+              <span style="width:5px;height:5px;background:#4D8BFF;border-radius:50%;display:inline-block;"></span>
+              Tecnologia &amp; Marketing
+            </div>
+            <div class="about-service-title" style="font-size:18px;margin-bottom:10px;">Elevus</div>
+            <p class="about-service-desc">Parceira responsável pelo desenvolvimento web, marketing digital e gestão da presença online da Sodo Elétrica.</p>
+          </div>
+
+          <!-- ASC -->
+          <div class="about-service-card reveal" style="padding:32px 28px;">
+            <div class="about-service-icon" style="width:52px;height:52px;border-radius:12px;margin-bottom:20px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(77,139,255,0.1);border:1px solid rgba(77,139,255,0.2);border-radius:100px;padding:3px 10px;font-size:10px;font-weight:600;color:#7BAEFF;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:12px;">
+              <span style="width:5px;height:5px;background:#4D8BFF;border-radius:50%;display:inline-block;"></span>
+              Adm. &amp; Construção Civil
+            </div>
+            <div class="about-service-title" style="font-size:18px;margin-bottom:10px;">ASC</div>
+            <p class="about-service-desc">Parceira em administração de obras e construção civil, complementando a expertise elétrica com gestão profissional de empreendimentos.</p>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="reveal">
+          <div class="parceria-cta-banner">
+            <div class="parceria-cta-glow"></div>
+            <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-widest text-[#7BAEFF] mb-2">Conheça em detalhes</p>
+                <h3 class="font-heading font-bold text-white text-2xl md:text-3xl">Saiba mais sobre cada parceiro.</h3>
+                <p class="text-white/55 text-sm mt-2 max-w-lg">Veja como Elevus ASC atuam ao lado da Sodo Elétrica em cada projeto.</p>
+              </div>
+              <a href="parcerias.html" target="_blank" rel="noopener" class="btn-cta flex-shrink-0">Ver Parceiros →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+        FOOTER
+    ═══════════════════════════════════════════ -->
+    <footer id="contato" class="bg-dark pt-16 pb-8">
+      <div class="max-w-container mx-auto px-6">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+          <!-- Brand -->
+          <div>
+            <a href="#inicio" class="flex items-center gap-2.5 no-underline mb-4">
+              <div class="w-16 h-16 flex items-center justify-center">
+                <img src="logo 2.png" alt="Logo Sodo Elétrica" class="w-full h-full object-contain"/>
+
+              </div>
+              <span class="font-heading font-bold text-lg text-white"> <span class="text-[#4D8BFF]">Sodo</span> <span class="text-white">Elétrica</span></span>
+            </a>
+            <p class="text-sm text-white/50 leading-relaxed mb-6">Soluções elétricas com segurança, qualidade e confiança.</p>
+            <div class="flex gap-2.5">
+              <a href="https://www.instagram.com/sodoeletrica" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+                <svg class="w-4 h-4 fill-white/60" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+              </a>
+              <a href="https://wa.me/5511962766513" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
+                <svg class="w-4 h-4 fill-white/60" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navegação -->
+          <div>
+            <h4 class="footer-col-title">Navegação</h4>
+            <ul class="flex flex-col gap-2.5">
+              <li><a href="#inicio"   class="footer-link">Início</a></li>
+              <li><a href="#sobre"    class="footer-link">Sobre Nós</a></li>
+              <li><a href="#servicos" class="footer-link">Serviços</a></li>
+              <li><a href="#projetos" class="footer-link">Projetos</a></li>
+              <li><a href="#blog"     class="footer-link">Blog</a></li>
+              <li><a href="parcerias.html" target="_blank" rel="noopener" class="footer-link" style="color:#4D8BFF;">Parcerias ↗</a></li>
+            </ul>
+          </div>
+
+          <!-- Serviços -->
+          <div>
+            <h4 class="footer-col-title">Serviços</h4>
+            <ul class="flex flex-col gap-2.5">
+              <li><a href="#" class="footer-link">Residencial</a></li>
+              <li><a href="#" class="footer-link">Comercial</a></li>
+              <li><a href="#" class="footer-link">Industrial</a></li>
+              <li><a href="#" class="footer-link">Manutenção</a></li>
+            </ul>
+          </div>
+
+          <!-- Contato -->
+         <div>
+            <h4 class="footer-col-title">Contato</h4>
+            <div class="flex flex-col gap-3">
+              <div class="footer-contact-item">
+                <svg class="w-4 h-4 stroke-[#4D8BFF] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <span>(11) 99754-2196</span>
+              </div>
+              <a href="https://www.instagram.com/sodoeletrica" target="_blank" rel="noopener" class="footer-contact-item hover:text-white transition-colors">
+                <svg class="w-4 h-4 stroke-[#4D8BFF] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#4D8BFF" stroke="none"/></svg>
+                <span>@sodoeletrica</span>
+              </a>
+              <a href="mailto:Engenharia@sodoeletrica.com" class="footer-contact-item hover:text-white transition-colors">
+                <svg class="w-4 h-4 stroke-[#4D8BFF] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+                <span>Engenharia@sodoeletrica.com</span>
+              </a>
+              <div class="footer-contact-item">
+                <svg class="w-4 h-4 stroke-[#4D8BFF] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>São Paulo – SP</span>
+              </div>
+            </div>
+          </div>
+ 
+        </div>
+
+        <!-- Certificações e Parceiros -->
+        <div class="border-t border-white/[0.07] pt-10 pb-10">
+          <p class="text-xs text-white/30 uppercase tracking-widest text-center mb-8 font-medium">Certificações &amp; Credenciais</p>
+          <div class="flex flex-wrap items-center justify-center gap-6">
+
+            <!-- CREA -->
+            <div class="cert-badge group">
+              <div class="cert-badge-inner">
+                <img src="crea.svg" alt="CREA — Conselho Regional de Engenharia e Agronomia" class="cert-logo-img cert-logo-light" />
+                <div class="cert-text">
+                  <span class="cert-name">CREA-SP</span>
+                  <span class="cert-desc">Conselho Regional de Engenharia</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-divider"></div>
+
+            <!-- ENEL -->
+            <div class="cert-badge group">
+              <div class="cert-badge-inner">
+                <img src="enel.png" alt="ENEL — Distribuidora de Energia" class="cert-logo-img" />
+                <div class="cert-text">
+                  <span class="cert-name">ENEL</span>
+                  <span class="cert-desc">Empresa Homologada</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-divider"></div>
+
+            <!-- ABNT -->
+            <div class="cert-badge group">
+              <div class="cert-badge-inner">
+                <img src="abnt.png" alt="ABNT — Associação Brasileira de Normas Técnicas" class="cert-logo-img cert-logo-light" />
+                <div class="cert-text">
+                  <span class="cert-name">ABNT NBR</span>
+                  <span class="cert-desc">Norma Brasileira de Instalações</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-divider"></div>
+
+            <!-- CFT -->
+            <div class="cert-badge group">
+              <div class="cert-badge-inner">
+                <img src="cft.png" alt="CFT — Conselho Federal dos Técnicos Industriais" class="cert-logo-img cert-logo-light" />
+                <div class="cert-text">
+                  <span class="cert-name">CFT</span>
+                  <span class="cert-desc">Conselho Federal dos Técnicos</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="border-t border-white/[0.07] pt-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-xs text-white/30">© 2026 Sodo Elétrica. Todos os direitos reservados.</p>
+          <p class="text-xs text-white/30">Desenvolvido e gerenciado por <a href="https://eulopes.github.io/elevus/" target="_blank" class="text-[#4D8BFF]/70 hover:text-[#4D8BFF] transition-colors font-medium">Elevus</a></p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+
+  </body>
+  </html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parceiros — Sodo Elétrica</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0033A0', 'primary-hover': '#002680',
+            dark: '#0A1118', 'dark-card': '#112240',
+            muted: '#64748B', border: '#E2E8F0',
+          },
+          fontFamily: { heading: ['Montserrat','sans-serif'], body: ['Inter','sans-serif'] },
+          maxWidth: { container: '1200px' },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ── HERO ── */
+    .parceria-hero {
+      background: linear-gradient(140deg, #0A1118 0%, #0d1e36 55%, #0A1118 100%);
+      position: relative; overflow: hidden;
+    }
+    .parceria-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 55% 65% at 75% 45%, rgba(0,51,160,0.28) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* ── CARDS DE PARCEIROS ── */
+    .partner-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    }
+    .partner-card:hover {
+      border-color: rgba(77,139,255,0.3);
+      background: rgba(0,51,160,0.07);
+      transform: translateY(-5px);
+    }
+    .partner-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0033A0, #4D8BFF);
+      border-radius: 20px 20px 0 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .partner-card:hover::before { opacity: 1; }
+
+    .partner-logo-wrap {
+      width: 72px; height: 72px;
+      background: rgba(0,51,160,0.2);
+      border: 1px solid rgba(77,139,255,0.2);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: #4D8BFF;
+      letter-spacing: -0.5px;
+    }
+
+    .partner-sector-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(77,139,255,0.1);
+      border: 1px solid rgba(77,139,255,0.2);
+      border-radius: 100px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #7BAEFF;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .partner-sector-badge span.dot {
+      width: 5px; height: 5px;
+      background: #4D8BFF;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .partner-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .partner-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .partner-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .partner-tag {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.3px;
+    }
+
+    .partner-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin-bottom: 28px;
+    }
+
+    .partner-collab {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 10px;
+    }
+
+    .partner-collab-items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .partner-collab-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+    }
+    .partner-collab-item::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #4D8BFF;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    /* ── FAIXA DE DESTAQUE ── */
+    .parceria-highlight {
+      background: linear-gradient(135deg, #0033A0 0%, #112240 60%, #0A1118 100%);
+      border-top: 1px solid rgba(77,139,255,0.15);
+      border-bottom: 1px solid rgba(77,139,255,0.15);
+      position: relative; overflow: hidden;
+    }
+    .parceria-highlight::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 50% 80% at 90% 50%, rgba(77,139,255,0.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* ── NÚMERO GRANDE DECORATIVO ── */
+    .partner-number {
+      position: absolute;
+      top: 28px; right: 28px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 80px;
+      line-height: 1;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body class="font-body text-slate-800 bg-dark antialiased">
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark/95 backdrop-blur border-b border-white/[0.07]">
+    <div class="max-w-container mx-auto px-6">
+      <div class="flex items-center justify-between h-[72px] gap-6">
+
+        <a href="index.html" class="logo flex items-center gap-2.5 no-underline flex-shrink-0">
+          <div class="w-20 h-20 flex items-center justify-center">
+            <img src="logo 2.png" alt="Logo Sodo Elétrica" class="w-full h-full object-contain"/>
+          </div>
+          <span class="font-sans font-bold text-lg tracking-wide">
+            <span class="text-[#4D8BFF]">Sodo</span>
+            <span class="text-white">Elétrica</span>
+          </span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html"          class="nav-link">Início</a>
+          <a href="index.html#sobre"    class="nav-link">Sobre Nós</a>
+          <a href="index.html#servicos" class="nav-link">Serviços</a>
+          <a href="index.html#projetos" class="nav-link">Projetos</a>
+          <a href="index.html#contato"  class="nav-link">Contato</a>
+          <a href="parcerias.html"      class="nav-link nav-link-parceria" aria-current="page">Parceiros ↗</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="index.html#orcamento" class="btn-primary hidden sm:inline-flex">Solicite Orçamento →</a>
+          <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden bg-dark border-t border-white/10 px-6 py-4 flex-col gap-4" style="display:none;">
+      <a href="index.html"          class="nav-link-mobile">Início</a>
+      <a href="index.html#sobre"    class="nav-link-mobile">Sobre Nós</a>
+      <a href="index.html#servicos" class="nav-link-mobile">Serviços</a>
+      <a href="index.html#projetos" class="nav-link-mobile">Projetos</a>
+      <a href="index.html#contato"  class="nav-link-mobile">Contato</a>
+      <a href="parcerias.html"      class="nav-link-mobile nav-link-parceria-mobile">Parceiros ↗</a>
+      <a href="index.html#orcamento" class="btn-primary text-center mt-2">Solicite Orçamento →</a>
+    </div>
+  </header>
+
+
+  <!-- ═══ HERO ═══ -->
+  <section class="parceria-hero min-h-[52vh] flex items-center pt-[72px]">
+    <div class="hero-glow-1 pointer-events-none"></div>
+    <div class="hero-logo-pattern pointer-events-none"></div>
+
+    <div class="max-w-container mx-auto px-6 py-20 relative z-10">
+      <div class="reveal max-w-2xl">
+        <div class="hero-badge inline-flex mb-6">
+          <span class="hero-badge-dot"></span>
+          Ecossistema de Parceiros
+        </div>
+        <h1 class="font-heading font-extrabold text-white uppercase leading-[1.1] tracking-tight mb-5" style="font-size:clamp(32px,4vw,52px)">
+          Empresas que constroem<br>
+          <span class="text-[#4D8BFF]">junto com a Sodo.</span>
+        </h1>
+        <p class="text-white/55 text-base leading-relaxed max-w-lg">
+          A Sodo Elétrica acredita que grandes resultados nascem de colaborações sólidas. Conheça as empresas parceiras com quem atuamos lado a lado em tecnologia, obras e gestão.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ PARCEIROS ═══ -->
+  <section class="py-20 bg-dark">
+    <div class="max-w-container mx-auto px-6">
+
+      <div class="text-center mb-16 reveal">
+        <p class="section-label">Nossos parceiros</p>
+        <h2 class="section-title text-white">Quem está ao nosso lado.</h2>
+        <p class="text-white/40 text-sm mt-3 max-w-md mx-auto">Parcerias estratégicas que ampliam nossa capacidade de entrega e fortalecem cada projeto.</p>
+      </div>
+
+      <div class="flex flex-col gap-8">
+
+        <!-- ── ELEVUS ── -->
+        <div class="partner-card reveal">
+          <div class="partner-number">01</div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-12 items-start">
+
+            <!-- Coluna esquerda: identidade -->
+            <div>
+              <div class="partner-logo-wrap">EL</div>
+              <div class="partner-sector-badge">
+                <span class="dot"></span>
+                Tecnologia &amp; Marketing
+              </div>
+              <div class="partner-name">Elevus</div>
+              <p class="partner-desc">
+                A Elevus é a parceira estratégica da Sodo Elétrica em tecnologia e marketing digital. Responsável pelo desenvolvimento e gestão da presença online da marca, a Elevus cuida de tudo que envolve identidade digital, performance e inovação tecnológica — garantindo que a Sodo se comunique com excelência no ambiente digital.
+              </p>
+              <div class="partner-tags">
+                <span class="partner-tag">Desenvolvimento Web</span>
+                <span class="partner-tag">Marketing Digital</span>
+                <span class="partner-tag">Identidade de Marca</span>
+                <span class="partner-tag">Performance Online</span>
+                <span class="partner-tag">Tecnologia</span>
+              </div>
+              <a href="https://eulopes.github.io/elevus/" target="_blank" rel="noopener"
+                 class="btn-outline inline-flex gap-2 text-xs">
+                Conhecer a Elevus ↗
+              </a>
+            </div>
+
+            <!-- Coluna direita: colaboração -->
+            <div>
+              <div class="partner-divider"></div>
+              <p class="partner-collab">Como colaboramos</p>
+              <div class="partner-collab-items">
+                <div class="partner-collab-item">Criação e manutenção do site institucional da Sodo Elétrica, com foco em performance, SEO e experiência do usuário.</div>
+                <div class="partner-collab-item">Gestão da presença digital da marca em redes sociais e meios digitais, posicionando a Sodo como referência no setor elétrico.</div>
+                <div class="partner-collab-item">Desenvolvimento de materiais de comunicação, identidade visual e ativos de marketing para campanhas e eventos.</div>
+                <div class="partner-collab-item">Suporte tecnológico contínuo para garantir que os canais digitais da Sodo estejam sempre atualizados e funcionando com excelência.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── ASC ── -->
+        <div class="partner-card reveal">
+          <div class="partner-number">02</div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-12 items-start">
+
+            <!-- Coluna esquerda: identidade -->
+            <div>
+              <div class="partner-logo-wrap">ASC</div>
+              <div class="partner-sector-badge">
+                <span class="dot"></span>
+                Administração &amp; Construção Civil
+              </div>
+              <div class="partner-name">ASC</div>
+              <p class="partner-desc">
+                A ASC — empresa de Administração de Obras e Construção Civil — é parceira estratégica da Sodo Elétrica na gestão e administração de empreendimentos. Com foco em organização, conformidade e entrega eficiente, a ASC complementa a expertise elétrica da Sodo com uma gestão de obras profissional e estruturada.
+              </p>
+              <div class="partner-tags">
+                <span class="partner-tag">Administração de Obras</span>
+                <span class="partner-tag">Construção Civil</span>
+                <span class="partner-tag">Gestão de Projetos</span>
+                <span class="partner-tag">Conformidade Técnica</span>
+                <span class="partner-tag">Gestão de Contratos</span>
+              </div>
+            </div>
+
+            <!-- Coluna direita: colaboração -->
+            <div>
+              <div class="partner-divider"></div>
+              <p class="partner-collab">Como colaboramos</p>
+              <div class="partner-collab-items">
+                <div class="partner-collab-item">Gestão administrativa de obras onde a Sodo Elétrica atua como responsável técnica pelas instalações elétricas, garantindo fluidez nos processos.</div>
+                <div class="partner-collab-item">Apoio na documentação técnica, contratos e conformidade normativa das instalações elétricas junto aos órgãos competentes.</div>
+                <div class="partner-collab-item">Planejamento e acompanhamento conjunto do cronograma de obras, alinhando os prazos elétricos com a gestão geral do empreendimento.</div>
+                <div class="partner-collab-item">Indicação recíproca de serviços em projetos de construção civil que demandam soluções elétricas de baixa e média tensão.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FAIXA SÍNTESE ═══ -->
+  <section class="parceria-highlight py-16">
+    <div class="max-w-container mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+        <div class="reveal">
+          <div class="font-heading font-extrabold text-[#4D8BFF] text-4xl mb-2">2</div>
+          <div class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-2">Parceiros Ativos</div>
+          <p class="text-white/40 text-xs leading-relaxed">Empresas selecionadas que compartilham nossos valores de qualidade e comprometimento.</p>
+        </div>
+
+        <div class="reveal">
+          <div class="font-heading font-extrabold text-[#4D8BFF] text-4xl mb-2">360°</div>
+          <div class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-2">Cobertura</div>
+          <p class="text-white/40 text-xs leading-relaxed">De tecnologia a obras civis, nosso ecossistema cobre todas as etapas de um projeto.</p>
+        </div>
+
+        <div class="reveal">
+          <div class="font-heading font-extrabold text-[#4D8BFF] text-4xl mb-2">SP</div>
+          <div class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-2">Base de Atuação</div>
+          <p class="text-white/40 text-xs leading-relaxed">São Paulo e Grande SP — onde concentramos projetos e colaborações com nossos parceiros.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CTA — Voltar ao site ═══ -->
+  <section class="py-16 bg-dark">
+    <div class="max-w-container mx-auto px-6 text-center reveal">
+      <p class="text-white/40 text-sm mb-6">Quer contratar nossos serviços ou falar com nossa equipe?</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="index.html#orcamento" class="btn-primary px-8 py-4">Solicitar Orçamento →</a>
+        <a href="index.html" class="btn-secondary px-8 py-4">← Voltar ao site</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="bg-dark pt-8 pb-8 border-t border-white/[0.07]">
+    <div class="max-w-container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2 no-underline">
+        <img src="logo 2.png" alt="Sodo Elétrica" class="w-10 h-10 object-contain"/>
+        <span class="font-heading font-bold text-sm text-white"><span class="text-[#4D8BFF]">Sodo</span> Elétrica</span>
+      </a>
+      <p class="text-xs text-white/30">© 2026 Sodo Elétrica. Todos os direitos reservados.</p>
+      <p class="text-xs text-white/30">Desenvolvido e gerenciado por<a href="https://eulopes.github.io/elevus/" target="_blank" class="text-[#4D8BFF]/70 hover:text-[#4D8BFF] transition-colors font-medium">Elevus</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
