@@ -111,7 +111,38 @@
 
 
 
-/* 5 EFEITO DE ANIMAÇÃO SERVICE CARDS */
+/* ──────────────────────────────────────────────────────────
+   5. EFEITO DE ANIMAÇÃO SERVICE CARDS — cursor glow
+   ────────────────────────────────────────────────────────── */
+(function initServiceCards() {
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--x', `${x}px`);
+      card.style.setProperty('--y', `${y}px`);
+    });
+  });
+})();
 
-card.style.setProperty('--x', `${x}px`);
-card.style.setProperty('--y', `${y}px`);
+
+/* ──────────────────────────────────────────────────────────
+   6. BACK TO TOP
+   ────────────────────────────────────────────────────────── */
+(function initBackToTop() {
+  const backToTop = document.getElementById('backToTop');
+  if (!backToTop) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
