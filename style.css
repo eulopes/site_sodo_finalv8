@@ -17,21 +17,20 @@
 }
 
 /* ── HERO STATS — controle mobile/desktop ──────────────────── */
-/* Desktop (lg+): stats dentro do bloco de texto, mobile oculto */
 .hero-stats-mobile {
   display: none;
   grid-column: 1 / -1;
 }
 
-/* Mobile (< lg): oculta desktop, mostra mobile abaixo da foto */
 @media (max-width: 1023px) {
   .hero-stats-desktop {
     display: none !important;
   }
   .hero-stats-mobile {
     display: flex;
-    margin-top: 24px;
+    flex-wrap: wrap;
     gap: 0;
+    margin-top: 24px;
     justify-content: space-around;
   }
   .hero-stats-mobile > div {
@@ -478,11 +477,29 @@ a { text-decoration: none; }
     right: auto;
     min-width: auto;
     border-radius: 12px;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 16px 12px;
+    gap: 0;
   }
   .about-stat-divider {
     width: 1px !important;
     height: auto !important;
+    align-self: stretch;
+  }
+  .about-stat-item {
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+  }
+  .about-stat-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .about-stat-num {
+    font-size: 20px;
+  }
+  .about-stat-label {
+    font-size: 10px;
   }
 }
 
