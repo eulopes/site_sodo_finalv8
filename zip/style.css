@@ -1936,38 +1936,3 @@ a { text-decoration: none; }
   visibility: visible;
   transform: translateY(0);
 }
-
-/* ===== PREMIUM ELEVUS UPDATE ===== */
-:root{--mouse-x:50%;--mouse-y:50%;}
-
-.hero-section::after{
-content:'';position:absolute;inset:0;pointer-events:none;
-background:radial-gradient(500px circle at var(--mouse-x) var(--mouse-y),rgba(77,139,255,.08),transparent 40%);
-}
-
-.partner-card:hover{
-transform:translateY(-8px)!important;
-box-shadow:0 25px 60px rgba(0,51,160,.18)!important;
-}
-
-.elevus-premium-section{
-background:linear-gradient(180deg,#0A1118,#08101a);
-position:relative;overflow:hidden;
-}
-.elevus-premium-card{
-position:relative;padding:60px;border-radius:28px;color:#fff;
-background:linear-gradient(135deg,#0A0A0A,#111827);
-border:1px solid rgba(255,255,255,.08);
-overflow:hidden;
-}
-.elevus-premium-card:before{
-content:'';position:absolute;width:450px;height:450px;
-right:-120px;top:-80px;opacity:.08;border:1px solid #fff;
-clip-path:polygon(25% 6.7%,75% 6.7%,100% 50%,75% 93.3%,25% 93.3%,0 50%);
-}
-.premium-label{color:#60a5fa;letter-spacing:3px;font-size:12px}
-.elevus-premium-card h2{font-size:48px;font-weight:800;margin:12px 0}
-.premium-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.premium-tags span{padding:8px 14px;border:1px solid rgba(255,255,255,.1);border-radius:999px}
-
-
