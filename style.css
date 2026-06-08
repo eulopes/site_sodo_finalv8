@@ -16,10 +16,40 @@
   --transition-base:   0.2s ease;
 }
 
+/* ── HERO STATS — controle mobile/desktop ──────────────────── */
+/* Desktop (lg+): stats dentro do bloco de texto, mobile oculto */
+.hero-stats-mobile {
+  display: none;
+  grid-column: 1 / -1;
+}
+
+/* Mobile (< lg): oculta desktop, mostra mobile abaixo da foto */
+@media (max-width: 1023px) {
+  .hero-stats-desktop {
+    display: none !important;
+  }
+  .hero-stats-mobile {
+    display: flex;
+    margin-top: 24px;
+    gap: 0;
+    justify-content: space-around;
+  }
+  .hero-stats-mobile > div {
+    flex: 1;
+    text-align: center;
+    padding: 0 6px;
+  }
+  .hero-stats-mobile > div .font-heading {
+    font-size: 1.5rem;
+  }
+}
+
 /* ── RESET / BASE ──────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body { overflow-x: hidden; }
 
 a { text-decoration: none; }
 
@@ -201,11 +231,13 @@ a { text-decoration: none; }
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0,51,160,0.25) 0%, transparent 70%);
+  pointer-events: none;
 }
 .hero-glow-2 {
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse 40% 60% at 20% 80%, rgba(0,51,160,0.12) 0%, transparent 60%);
+  pointer-events: none;
 }
 .hero-grid {
   display: none;
@@ -361,7 +393,7 @@ a { text-decoration: none; }
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 8px;
-  padding: 12px 18px;
+  padding: 10px 12px;
   font-size: 11px;
   font-weight: 700;
   color: rgba(255,255,255,0.75);
@@ -371,6 +403,7 @@ a { text-decoration: none; }
     background var(--transition-base),
     border-color var(--transition-base),
     transform var(--transition-base);
+  overflow: hidden;
 }
 
 .about-badge-item:hover {
@@ -380,27 +413,44 @@ a { text-decoration: none; }
 }
 
 .about-badge-icon {
-  width: 16px;
-  height: 16px;
-  margin-right: -15px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
   object-fit: contain;
   display: block;
 }
 
 .about-badge-item span {
-  line-height: none;
-  white-space: nowrap;
-  font-size: 11.5px;
+  line-height: 1.3;
+  white-space: normal;
+  font-size: 10.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
 }
 
 .badge-escudo,
 .badge-conformidade,
 .badge-nr10,
 .badge-atendimento {
-  width: 50px;
-  height: 25px;
-  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  flex-shrink: 0;
+}
+
+/* Mobile: badges em coluna única para texto não cortar */
+@media (max-width: 640px) {
+  .grid.grid-cols-2.gap-3.mt-8 {
+    grid-template-columns: 1fr;
+  }
+  .about-badge-item {
+    padding: 10px 14px;
+  }
+  .about-badge-item span {
+    white-space: nowrap;
+    font-size: 11px;
+  }
 }
 
 
@@ -408,7 +458,7 @@ a { text-decoration: none; }
 .about-stats-overlay {
   position: absolute;
   bottom: 20px;
-  right: -16px;
+  right: 0;
   background: #012e7c;
   border: 1px solid rgba(77,139,255,0.35);
   border-radius: 16px;
@@ -837,19 +887,19 @@ a { text-decoration: none; }
 }
 
 .blog-thumb {
-  height: 140px;
+  height: 168px;
   background: linear-gradient(135deg, #0A1118 0%, #112240 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  
+  overflow: hidden;
 }
 .blog-thumb svg {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 110%;
+  height: 100%;
 }
 .blog-num {
   position: absolute;
@@ -1400,6 +1450,18 @@ a { text-decoration: none; }
 }
 
 /* ── HERO — FRAME DE FOTO REAL ─────────────────────────────── */
+
+.hero-stats {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1023px) {
+  .hero-stats {
+    margin-top: 24px;
+    justify-content: center;
+    text-align: center;
+  }
+}
 .hero-photo-frame {
   width: 100%;
   max-width: 480px;
@@ -1446,6 +1508,7 @@ a { text-decoration: none; }
   width: 100%;
   padding-bottom: 40px;
   padding-right: 40px;
+  overflow: hidden;
 }
 
 @media (max-width: 1023px) {
